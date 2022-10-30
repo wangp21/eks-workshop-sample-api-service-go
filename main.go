@@ -13,6 +13,8 @@ import (
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 
+
+
 		f := fib()
 
 		res := &response{Message: "Hello World"}
@@ -35,7 +37,7 @@ func main() {
 
 		io.WriteString(w, string(out))
 
-		fmt.Println("Hello world - the log message")
+		fmt.Println("Hello world - the log message!!")
 	})
 	http.ListenAndServe(":8080", nil)
 }
